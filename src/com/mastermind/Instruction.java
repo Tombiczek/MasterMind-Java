@@ -10,31 +10,31 @@ import java.awt.image.BufferedImage;
 import static com.mastermind.Game.HEIGHT;
 import static com.mastermind.Game.WIDTH;
 
-public class EasterEgg extends GamePanel {
+public class Instruction extends GamePanel {
 
 
-    private final BufferedImage easterEgg;
+    private final BufferedImage instruction;
     private final GuiButton quit;
     private final Font bigFont = Game.main.deriveFont(40f);
     private final Font font = Game.main.deriveFont(18f);
 
 
 
-    public EasterEgg() {
-        easterEgg = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
+    public Instruction() {
+        instruction = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         quit = new GuiButton(WIDTH / 2 - 80, 770, 160, 50);
         quit.setText("Back");
 
         quit.addActionListener(e -> GameScreen.getInstance().setCurrentPanel("Menu"));
     }
 
-    public void drawShit(Graphics2D g){
-        Graphics2D g2d = (Graphics2D) easterEgg.getGraphics();
+    public void drawText(Graphics2D g){
+        Graphics2D g2d = (Graphics2D) instruction.getGraphics();
         g2d.setColor(Color.white);
-        g2d.fillRect(0, 0, easterEgg.getWidth(), easterEgg.getHeight());
+        g2d.fillRect(0, 0, instruction.getWidth(), instruction.getHeight());
         g2d.setColor(Color.black);
         String title = "Instrukcja";
-        g2d.drawString(title, (easterEgg.getWidth() / 2 - DrawUtils.getMessageWidth(title, bigFont, g2d) / 2), 80);
+        g2d.drawString(title, (instruction.getWidth() / 2 - DrawUtils.getMessageWidth(title, bigFont, g2d) / 2), 80);
         g2d.setFont(font);
         g2d.drawString("Odgadnij ukryty kod!", 165, 150);
         g2d.drawString("Mastermind to logiczna gra planszowa wynaleziona", 30, 200);
@@ -56,12 +56,12 @@ public class EasterEgg extends GamePanel {
         g2d.drawString("Wypróbuj tryb 'Easy', w którym kolory losowanej", 30, 690);
         g2d.drawString("kombinacji nie mogą się powtarzać.", 30, 720);
         g2d.dispose();
-        g.drawImage(easterEgg, 0, 0, null);
+        g.drawImage(instruction, 0, 0, null);
     }
 
     @Override
     public void render(Graphics2D g){
-        drawShit(g);
+        drawText(g);
         add(quit);
         super.render(g);
     }

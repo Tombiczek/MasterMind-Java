@@ -36,7 +36,7 @@ public class Game extends JPanel implements KeyListener, MouseListener, MouseMot
         screen = GameScreen.getInstance();
         screen.add("Menu", new MainMenuPanel());
         screen.add("Play", new PlayPanel());
-        screen.add("EasterEgg", new EasterEgg());
+        screen.add("EasterEgg", new Instruction());
         screen.add("PlayEasy", new PlayPanelEz());
         screen.setCurrentPanel("Menu");
     }
