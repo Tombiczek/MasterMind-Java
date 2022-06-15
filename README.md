@@ -32,6 +32,7 @@ you will see the running time in the top right corner. After you
 win or loose the game the time will stop. Please be aware that
 times are not being saved yet, so in order to compare yourself, 
 you should write it down before quiting the game.
+
 ![Alt text](resources/playtime.png?raw=true "Menu")
 
 
