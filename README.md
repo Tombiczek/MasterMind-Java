@@ -1,6 +1,10 @@
 # MasterMind Java
 This is a MasterMind game written in Java, for a uni project.
 
+[DISCLAIMER: I realised that there are some parts of the game that
+i got wrong (in example the checking algorithm). I will be
+correcting that soon]
+
 
 # How to use the game
 Please, before changing the game mode, especially mid-game, do
@@ -16,6 +20,7 @@ fix it before me, go ahead, but I recommend to not bother.
 This is the main menu of the game. You have two levels of difficulty to
 choose from, option to read the instructions [Polish], reset the game
 or quit.
+
 ![Alt text](resources/menu.png?raw=true "Menu")
 
 
@@ -23,6 +28,7 @@ or quit.
 After you press the 'Play' button you will see the following image.
 The game will not start until you press Q W E R or A S D F. Time: null
 is an indicator of a game not yet started.
+
 ![Alt text](resources/play.png?raw=true "Menu")
 
 
